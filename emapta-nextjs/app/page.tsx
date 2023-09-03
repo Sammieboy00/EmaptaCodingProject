@@ -30,16 +30,18 @@ export default function Home() {
   const errorComponent = <div className="text-red-500">Error: {error}</div>;
 
   return (
-    <div className="p-24">
+    <div className="p-6">
       {loading ? (
         loadingComponent
       ) : error ? (
         errorComponent
       ) : (
-        <div>
-          {data.map((cardDetail):any => {
-            return <Card title={cardDetail.title} textContent={cardDetail.text_content} />
-          })}
+        <div className="container my-12 mx-auto px-4 md:px-12">
+          <div className="flex flex-wrap -mx-1 lg:-mx-4">
+            {data.map((cardDetail):any => {
+              return <Card title={cardDetail.title} textContent={cardDetail.text_content} />
+            })}
+          </div>
         </div>
       )}
     </div>
