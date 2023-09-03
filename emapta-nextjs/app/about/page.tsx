@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link'
 import React, { useEffect, useState } from "react";
 
 export default function About() {
@@ -21,7 +20,6 @@ export default function About() {
       })
       .finally(() => {
         setLoading(false);
-        console.log(data);
       })
   }, [])
 
