@@ -8,11 +8,11 @@ interface CardProps {
 
 const Card = ({ title, textContent }: CardProps) => {
   return (
-      <div>
-        <div className="title">
-            <p>{title}</p>
+      <div className="block max-w-sm p-6 m-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <div className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3>{title}</h3>
         </div>
-        <div className="content">
+        <div className="font-normal text-gray-700 dark:text-gray-400">
             <p>{parse("" + textContent)}</p>
         </div>
       </div>
